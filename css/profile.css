@@ -356,7 +356,7 @@ body.no-scroll {
         position: absolute;
         top: 50%;
         right: 0;
-        transform: translate3d(calc(100% + 1.364em), -50%, 0);
+        transform: translate3d(calc(100% + 0.455em), -50%, 0);
         background-image: url("../images/UI/buttons/icon_01.svg");
         background-repeat: no-repeat;
         background-position: center;
@@ -371,7 +371,7 @@ body.no-scroll {
 
 @media (min-width: 768px) and (any-hover: hover) {
     .button_icon:hover span {
-        transform: translate3d(calc(var(--icon-width) - var(--icon-width) * 2), 0, 0);
+        transform: translate3d(calc((var(--icon-width) - var(--icon-width) * 2) / 2), 0, 0);
     }
 
     .button_icon:hover span::after {
@@ -657,13 +657,14 @@ body.no-scroll {
 }
 
 .header__action {
+    padding: 0.5em 0;
     display: block;
     font-size: 1.25rem;
     font-weight: 700;
     text-align: center;
     line-height: 1.571;
  /* 157.143% */
-    color: var(--gray-gray-60, #67677a);
+    color: var(--base-cristal-white, #ffffff);
     cursor: pointer;
     transition: color 0.2s linear, background 0.2s linear;
     border-radius: 0.4em;
@@ -685,6 +686,7 @@ body.no-scroll {
         padding: 0;
         font-size: 0.875rem;
         text-align: left;
+        color: var(--gray-gray-60, #67677a);
         border-radius: 0;
         background: none;
     }
