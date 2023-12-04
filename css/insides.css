@@ -873,3 +873,977 @@ body.no-scroll {
         text-decoration: none;
     }
 }
+
+.inputs {
+    --label-fs: 0.875rem;
+    --fs: 1rem;
+    --text-fs: 0.75rem;
+    --height: 2.5rem;
+    --icon-size: 0.875rem;
+    --gap: 0.375rem;
+    --line-height: 1px;
+    --label-clr: var(--gray-gray_50, #9393a3);
+    --clr: var(--base-cristal-white, #fff);
+    --placeholder-clr: var(--gray-gray_70, #3e3e52);
+    --icon-clr: var(--gray-gray_40, #bcbccc);
+    --line-clr: var(--gray-gray_70, #3e3e52);
+    --line-clr-focus: var(--brandbook-main, #f7971d);
+    --line-clr-hover: var(--base-cristal-white, #fff);
+    --text-clr: var(--gray-gray_40, #bcbccc);
+    --clr-error: var(--brandbook-more, #f22a52);
+    --duration: 0.2s;
+}
+
+.inputs.error {
+    --label-clr: var(--clr-error);
+    --line-clr: var(--clr-error);
+}
+
+.inputs__text {
+    padding: 0.5rem 0 0 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--text-clr);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+/*
+<div class="inputs input">
+  <div class="input__wrapper">
+    <div class="input__label">Фамилия</div>
+
+    <label class="input__group">
+      <div class="input__icon">
+        <svg>
+          <use
+            href="../images/sprite.svg#calendar"
+            xlink:href="../images/sprite.svg#calendar"
+          ></use>
+        </svg>
+      </div>
+      <input class="input__target" type="text" placeholder="Фамилия" />
+      <div class="input__line"></div>
+      <div class="input__icon">
+        <svg>
+          <use
+            href="../images/sprite.svg#eye"
+            xlink:href="../images/sprite.svg#eye"
+          ></use>
+        </svg>
+      </div>
+    </label>
+  </div>
+
+  <p class="inputs__text" title="Для получения договора и документов об оплате">
+    Для получения договора и документов об оплате
+  </p>
+</div>
+*/
+.input {
+    --input-textarea-height: 4.375rem;
+}
+
+.input__label {
+    display: block;
+    font-size: var(--label-fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--label-clr);
+    transition: color var(--duration) linear;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+.input__group {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    cursor: text;
+    position: relative;
+}
+
+@media (any-hover: hover) {
+    .input__group:hover .input__line {
+        background: var(--line-clr-hover);
+    }
+}
+
+.input__icon {
+    flex: 0 0 var(--icon-size);
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.input__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: transparent;
+    stroke: var(--icon-clr);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke var(--duration) linear;
+}
+
+.input__icon.active svg {
+    stroke: var(--clr);
+}
+
+.input__target {
+    width: 100%;
+    display: block;
+    font-size: var(--fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 135.714% */
+    color: var(--clr);
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.input__target::-moz-placeholder {
+    color: var(--placeholder-clr);
+}
+
+.input__target::placeholder {
+    color: var(--placeholder-clr);
+}
+
+.input__target:focus + .input__line::after {
+    transform: translate3d(0, 0, 0);
+}
+
+input.input__target {
+    min-height: var(--height);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+textarea.input__target {
+    height: var(--input-textarea-height);
+    padding: 0.625em 0 0 0;
+    resize: none;
+}
+
+.input__line {
+    width: 100%;
+    height: var(--line-height);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: var(--line-clr);
+    transition: background var(--duration) linear;
+}
+
+.input__line::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--line-clr-focus);
+    transform: translate3d(-101%, 0, 0);
+    transition: transform var(--duration) linear;
+}
+
+/*
+<div class="inputs select">
+  <div class="select__wrapper">
+    <div class="select__label">Город</div>
+
+    <div class="select__body">
+      <select data-select>
+        <option value="Санкт-Петербург">
+          Санкт-Петербург Санкт-Петербург Санкт-Петербург Санкт-Петербург
+        </option>
+        <option value="Москва">Москва</option>
+        <option value="Екатеренбург">Екатеренбург</option>
+      </select>
+
+      <div class="select__icon">
+        <svg>
+          <use
+            href="../images/sprite.svg#drop"
+            xlink:href="../images/sprite.svg#drop"
+          ></use>
+        </svg>
+      </div>
+
+      <div class="select__line"></div>
+    </div>
+  </div>
+
+  <p class="inputs__text" title="Для получения договора и документов об оплате">
+    Для получения договора и документов об оплате
+  </p>
+</div>
+*/
+.select__label {
+    display: block;
+    font-size: var(--label-fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--label-clr);
+    transition: color var(--duration) linear;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+.select__body {
+    position: relative;
+}
+
+@media (any-hover: hover) {
+    .select__body:hover .select__line {
+        background: var(--line-clr-hover);
+    }
+}
+
+.select__body.active .select__line::after {
+    transform: translate3d(0, 0, 0);
+}
+
+.select__line {
+    width: 100%;
+    height: var(--line-height);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    background: var(--line-clr);
+    transition: background var(--duration) linear;
+}
+
+.select__line::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--line-clr-focus);
+    transform: translate3d(-101%, 0, 0);
+    transition: transform var(--duration) linear;
+}
+
+.select__icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    position: absolute;
+    top: calc(50% - var(--icon-size) / 2);
+    right: 0;
+    pointer-events: none;
+}
+
+.select__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: transparent;
+    stroke: var(--icon-clr);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke var(--duration) linear;
+    transition: transform var(--duration) linear;
+}
+
+.select__body .select2-container {
+    display: block;
+}
+
+.select__body .select2-container--open + .select__icon svg {
+    transform: rotate(180deg);
+}
+
+.select__body .select2.select2-container .select2-selection {
+    width: 100%;
+    min-height: var(--height);
+    display: flex;
+    align-items: center;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.select__body .select2.select2-container .select2-selection .select2-selection__rendered {
+    padding: 0 calc(var(--icon-size) + var(--gap)) 0 0;
+    margin: 0;
+    font-size: var(--fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 135.714% */
+    color: var(--clr);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+    white-space: normal;
+}
+
+.select__body .select2-selection__arrow {
+    display: none;
+}
+
+.select__dropdown.select2-dropdown {
+    padding: var(--line-height) 0 0 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+
+.select__dropdown.select2-dropdown .select2-search {
+    display: none;
+}
+
+.select__dropdown.select2-dropdown .select2-results {
+    padding: 0.625rem 1.25rem;
+    background: var(--base-rich-black, #06101a);
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.select__dropdown.select2-dropdown .select2-results__option {
+    padding: 0.375rem 0;
+    display: block;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--label-clr) !important;
+    background: none !important;
+}
+
+.select__dropdown.select2-dropdown .select2-results__option--highlighted {
+    color: var(--line-clr-focus) !important;
+}
+
+.select__dropdown.select2-dropdown .select2-results__option--selected {
+    color: var(--clr) !important;
+}
+
+/*
+<div class="checkbox">
+  <div class="checkbox__wrapper">
+    <label class="checkbox__label">
+      <input class="checkbox__input" type="checkbox" />
+      <div class="checkbox__icon">
+        <svg>
+          <use
+            href="../images/sprite.svg#checked"
+            xlink:href="../images/sprite.svg#checked"
+          ></use>
+        </svg>
+      </div>
+
+      <p class="checkbox__text">
+        Я ознакомлен и согласен со <span>следующим</span>
+      </p>
+    </label>
+  </div>
+</div>
+*/
+.checkbox {
+    --fs: 0.875rem;
+    --clr: var(--gray-gray_50, #9393a3);
+    --icon-size: 1.375rem;
+    --icon-clr: var(--base-cristal-white, #fff);
+    --border-radius: 0.25rem;
+    --bg: var(--gray-gray_70, #3e3e52);
+    --bg-active: var(--brandbook-main, #f7971d);
+}
+
+.checkbox__wrapper {
+    display: flex;
+}
+
+.checkbox__label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (any-hover: hover) {
+    .checkbox__label:hover .checkbox__icon {
+        background: var(--bg-active);
+    }
+}
+
+.checkbox__input {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+}
+
+.checkbox__input:checked + .checkbox__icon {
+    background: var(--bg-active);
+}
+
+.checkbox__input:checked + .checkbox__icon svg {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.checkbox__icon {
+    flex: 0 0 var(--icon-size);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    background: var(--bg);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: background 0.2s linear;
+}
+
+.checkbox__icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: transparent;
+    stroke: var(--icon-clr);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(180deg) scale(0.1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.2s;
+}
+
+.checkbox__text {
+    padding: 0 0 0 0.625rem;
+    display: block;
+    font-family: "Golos";
+    font-size: var(--fs);
+    line-height: 1.214;
+ /* 141.667% */
+    color: var(--clr);
+}
+
+.checkbox__text a,
+.checkbox__text span {
+    text-decoration: underline;
+}
+
+@media (any-hover: hover) {
+    .checkbox__text a:hover,
+  .checkbox__text span:hover {
+        text-decoration: none;
+    }
+}
+
+/*
+<div class="inputs radio">
+  <div class="radio__wrapper">
+    <div class="radio__label">Ваш пол</div>
+
+    <div class="radio__body">
+      <div class="radio__items">
+        <label class="radio__item">
+          <input
+            checked
+            class="radio__input"
+            type="radio"
+            name="sex"
+            value="male"
+          />
+          <span class="radio__content">
+            <span>Мужской</span>
+          </span>
+        </label>
+        <label class="radio__item">
+          <input class="radio__input" type="radio" name="sex" value="female" />
+          <span class="radio__content">
+            <span>Женский</span>
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>
+*/
+.radio {
+    --fs: 1rem;
+    --border-radius: 0.25rem;
+    --clr: var(--base-cristal-white, #fff);
+    --clr-active: var(--base-rich-black, #06101a);
+    --bg: #182938;
+    --bg-active: var(
+    --buttons-orange,
+    linear-gradient(103deg, #f7971d -0.53%, #f76b1d 100.4%)
+  );
+}
+
+.radio__label {
+    margin: 0 0 0.625rem 0;
+    display: block;
+    font-size: var(--label-fs);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--label-clr);
+    transition: color var(--duration) linear;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -moz-box;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    line-clamp: 1;
+    box-orient: vertical;
+}
+
+.radio__body {
+    display: flex;
+}
+
+.radio__items {
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.313rem;
+    border-radius: var(--border-radius);
+    background: var(--bg);
+}
+
+.radio__item {
+    display: block;
+}
+
+.radio__input {
+    width: 0;
+    height: 0;
+    font-size: 0;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    z-index: -999;
+}
+
+.radio__input:checked + .radio__content {
+    color: var(--clr-active);
+}
+
+.radio__input:checked + .radio__content::after {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.radio__content {
+    padding: 0.313rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs);
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.571;
+ /* 157.143% */
+    color: var(--clr);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: color var(--duration) linear;
+    position: relative;
+}
+
+.radio__content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: var(--bg-active);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition-property: opacity, visibility, transform;
+    transition-duration: var(--duration);
+}
+
+.radio__content span {
+    position: relative;
+    z-index: 1;
+}
+
+@media (any-hover: hover) {
+    .radio__content:hover {
+        color: var(--clr-active);
+    }
+
+    .radio__content:hover::after {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
+
+.autocomplete-suggestions {
+    padding: 0.5rem 0.625rem;
+    overflow: auto;
+    background: var(--base-rich-black, #06101a);
+    box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0, var(--line-height), 0);
+}
+
+.autocomplete-suggestion {
+    padding: 0.375rem 0;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.1;
+ /* 136.364% */
+    color: var(--label-clr);
+    transition: color var(--duration) linear;
+}
+
+@media (any-hover: hover) {
+    .autocomplete-suggestion:hover {
+        color: var(--line-clr-focus);
+    }
+}
+
+.autocomplete-suggestions strong {
+    color: var(--clr);
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+/*
+<div class="autocomplete-suggestions">
+    <div class="autocomplete-group"><strong>NHL</strong></div>
+    <div class="autocomplete-suggestion autocomplete-selected">...</div>
+    <div class="autocomplete-suggestion">...</div>
+    <div class="autocomplete-suggestion">...</div>
+</div>
+*/
+.content-wrapper {
+    padding: 5px 0 40px 0;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 576px) {
+    .content-wrapper {
+        padding: 10px 0 75px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        padding: 10px 0 100px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        padding: 10px 0 130px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-wrapper {
+        padding: 10px 0 150px 0;
+    }
+}
+
+.content-wrapper__body {
+    flex: 1 1 auto;
+    padding: 20px 15px;
+    border-radius: 0.75rem;
+    background: var(--gray-grey_80, #0e1b26);
+}
+
+@media (min-width: 768px) {
+    .content-wrapper__body {
+        padding: 30px 20px;
+        background: rgba(14, 27, 38, 0.6);
+        box-shadow: 0px 24px 134px 0px rgba(0, 0, 0, 0.6);
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-wrapper__body {
+        padding: 40px;
+    }
+}
+
+.title {
+    margin: 0 0 0.625rem 0;
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.333;
+ /* 133.333% */
+    color: var(--base-cristal-white, #fff);
+}
+
+@media (min-width: 768px) {
+    .title {
+        margin: 0 0 1em 0;
+        font-size: 1.563rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .title {
+        font-size: 1.875rem;
+    }
+}
+
+.decors {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .decors {
+        width: 0;
+        height: 0;
+        display: block;
+    }
+
+    .decors img {
+        width: 100%;
+        max-width: 26.938rem;
+        position: absolute;
+        z-index: -1;
+    }
+}
+
+.decors__decor-01 {
+    top: -100px;
+    left: 160px;
+}
+
+.decors__decor-02 {
+    top: 173px;
+    right: 75px;
+}
+
+.contact-info {
+    --gap-block: 20px;
+    --gap-inline: 30px;
+}
+
+.contact-info .content-wrapper__body {
+    max-width: 50rem;
+}
+
+@media (min-width: 768px) {
+    .contact-info__title {
+        text-align: center;
+    }
+}
+
+.contact-info__form {
+    display: grid;
+    gap: var(--gap-block) var(--gap-inline);
+}
+
+.contact-info__initials,
+.contact-info__contacts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13.125rem, 1fr));
+    gap: var(--gap-block) var(--gap-inline);
+}
+
+@media (min-width: 768px) {
+    .contact-info__initials,
+  .contact-info__contacts {
+        grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
+    }
+}
+
+@media (min-width: 450px) {
+    .contact-info__submit {
+        max-width: 8.125rem;
+    }
+}
+
+.passport-details {
+    --gap-block: 20px;
+    --gap-inline: 15px;
+}
+
+.passport-details .content-wrapper__body {
+    max-width: 46.875rem;
+}
+
+@media (min-width: 768px) {
+    .passport-details__title {
+        text-align: center;
+    }
+}
+
+.passport-details__form {
+    display: grid;
+    gap: var(--gap-block) var(--gap-inline);
+}
+
+.passport-details__data {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(8.75rem, 1fr));
+    gap: var(--gap-block) var(--gap-inline);
+}
+
+@media (max-width: 768px) {
+    .passport-details__data .inputs:nth-child(3),
+  .passport-details__data .inputs:nth-child(4) {
+        grid-column: 1/3;
+    }
+}
+
+@media (max-width: 576px) {
+    .passport-details__radio .radio__items {
+        width: 100%;
+        gap: 0;
+    }
+
+    .passport-details__radio .radio__item {
+        flex: 1 1 50%;
+    }
+}
+
+.passport-details__label {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.15;
+ /* 115% */
+    color: var(--base-cristal-white, #fff);
+}
+
+.passport-details__address {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap-block) var(--gap-inline);
+}
+
+.passport-details__address .inputs:nth-child(1),
+.passport-details__address .inputs:nth-child(2) {
+    grid-column: 1/3;
+}
+
+@media (min-width: 768px) {
+    .passport-details__address {
+        grid-template-columns: repeat(2, minmax(11.563rem, 1fr)) repeat(2, 5.625rem);
+    }
+
+    .passport-details__address .inputs:nth-child(1),
+  .passport-details__address .inputs:nth-child(2) {
+        grid-column: auto/auto;
+    }
+}
+
+.passport-details__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.passport-details__prev {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+ /* 125% */
+    color: var(--base-cristal-white, #fff);
+    transition: color 0.2s linear;
+}
+
+.passport-details__prev svg {
+    flex: 0 0 1em;
+    width: 1em;
+    height: 1em;
+    margin: 0 0.625em 0 0;
+    display: block;
+    fill: var(--gray-gray_40);
+    transition: fill 0.2s linear;
+}
+
+@media (any-hover: hover) {
+    .passport-details__prev:hover {
+        color: var(--brandbook-main, #f7971d);
+    }
+
+    .passport-details__prev:hover svg {
+        fill: var(--brandbook-main, #f7971d);
+    }
+}
+
+.passport-details__submit {
+    flex: 0 0 8.125rem;
+}
