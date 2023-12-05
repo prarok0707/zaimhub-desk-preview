@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
-    <title>Контактная информация</title>
+    <title>Форма обратной связи</title>
     <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
@@ -65,51 +65,25 @@
         </div>
       </header>
       <main class="content">
-        <div class="contact-info">
+        <div class="feedback">
           <div class="container">
             <div class="content-wrapper">
-              <div class="content-wrapper__body">
-                <h2 class="contact-info__title title">Контактная информация</h2>
-                <form class="contact-info__form">
-                  <div class="contact-info__initials">
+              <div class="feedback__body content-wrapper__body">
+                <h2 class="feedback__title title">Форма обратной связи</h2>
+                <form class="feedback__form">
+                  <div class="feedback__group">
                     <div class="inputs input">
                       <div class="input__wrapper">
-                        <div class="input__label">Фамилия</div>
+                        <div class="input__label">Email</div>
                         <label class="input__group"
                           ><input
                             class="input__target"
                             type="text"
-                            placeholder="Фамилия" />
+                            placeholder="Email" />
                           <div class="input__line"></div
                         ></label>
                       </div>
                     </div>
-                    <div class="inputs input error">
-                      <div class="input__wrapper">
-                        <div class="input__label">Имя</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Имя" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                    <div class="inputs input">
-                      <div class="input__wrapper">
-                        <div class="input__label">Отчество</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Отчество" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact-info__contacts">
                     <div class="inputs input">
                       <div class="input__wrapper">
                         <div class="input__label">Мобильный телефон</div>
@@ -124,22 +98,27 @@
                     </div>
                     <div class="inputs input">
                       <div class="input__wrapper">
-                        <div class="input__label">Email</div>
+                        <div class="input__label">Имя</div>
                         <label class="input__group"
                           ><input
                             class="input__target"
                             type="text"
-                            placeholder="Введите: 'm'"
-                            data-autocomplete />
+                            placeholder="Имя" />
                           <div class="input__line"></div
                         ></label>
                       </div>
-                      <p
-                        class="inputs__text"
-                        title="Для получения договора и документов об оплате"
-                      >
-                        Для получения договора и документов об оплате
-                      </p>
+                    </div>
+                  </div>
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <div class="input__label">Комментарий</div>
+                      <label class="input__group">
+                        <textarea
+                          class="input__target"
+                          placeholder="Введите комментарий"
+                        ></textarea>
+                        <div class="input__line"></div
+                      ></label>
                     </div>
                   </div>
                   <div class="checkbox">
@@ -162,10 +141,10 @@
                     </div>
                   </div>
                   <button
-                    class="contact-info__submit button button_sm"
+                    class="feedback__submit button button_sm"
                     type="submit"
                   >
-                    <span>Далее</span>
+                    <span>Отправить</span>
                   </button>
                 </form>
               </div>

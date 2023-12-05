@@ -11,7 +11,7 @@
     <meta name="google" content="notranslate" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content="" />
-    <title>Контактная информация</title>
+    <title>Идентификация пользователя</title>
     <link rel="stylesheet" href="./css/insides.min.css" />
   </head>
   <body>
@@ -65,108 +65,81 @@
         </div>
       </header>
       <main class="content">
-        <div class="contact-info">
+        <div class="identification">
           <div class="container">
             <div class="content-wrapper">
-              <div class="content-wrapper__body">
-                <h2 class="contact-info__title title">Контактная информация</h2>
-                <form class="contact-info__form">
-                  <div class="contact-info__initials">
-                    <div class="inputs input">
-                      <div class="input__wrapper">
-                        <div class="input__label">Фамилия</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Фамилия" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                    <div class="inputs input error">
-                      <div class="input__wrapper">
-                        <div class="input__label">Имя</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Имя" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                    <div class="inputs input">
-                      <div class="input__wrapper">
-                        <div class="input__label">Отчество</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Отчество" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="contact-info__contacts">
-                    <div class="inputs input">
-                      <div class="input__wrapper">
-                        <div class="input__label">Мобильный телефон</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="+7 (XXX) XXX-XX-XX" />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                    </div>
-                    <div class="inputs input">
-                      <div class="input__wrapper">
-                        <div class="input__label">Email</div>
-                        <label class="input__group"
-                          ><input
-                            class="input__target"
-                            type="text"
-                            placeholder="Введите: 'm'"
-                            data-autocomplete />
-                          <div class="input__line"></div
-                        ></label>
-                      </div>
-                      <p
-                        class="inputs__text"
-                        title="Для получения договора и документов об оплате"
-                      >
-                        Для получения договора и документов об оплате
-                      </p>
-                    </div>
-                  </div>
-                  <div class="checkbox">
-                    <div class="checkbox__wrapper">
-                      <label class="checkbox__label"
-                        ><input class="checkbox__input" type="checkbox" />
-                        <div class="checkbox__icon">
-                          <svg>
-                            <use
-                              href="./images/sprite.svg#checked"
-                              xlink:href="./images/sprite.svg#checked"
-                            ></use>
-                          </svg>
+              <div class="identification__body content-wrapper__body">
+                <h2 class="identification__title title">
+                  Идентификация пользователя
+                </h2>
+                <span class="identification__subtitle"
+                  >Мы спишем и вернем с Вашей карты 1 рубль. Это необходимо для
+                  предотвращения мошенничества связанного с выдачей займов
+                  третьим лицам</span
+                >
+                <form class="identification__form">
+                  <div class="inputs input">
+                    <div class="input__wrapper">
+                      <div class="input__label">Номер карты</div>
+                      <label class="input__group"
+                        ><div class="input__icon">
+                          <img
+                            src="./images/UI/inputs/card-front.svg"
+                            alt="card-front"
+                          />
                         </div>
-                        <p class="checkbox__text">
-                          Я ознакомлен и согласен со
-                          <span data-popup-id="id_popup">следующим</span>
-                        </p></label
-                      >
+                        <input
+                          class="input__target"
+                          type="text"
+                          placeholder="XXXX-XXXX-XXXX-XXXX" />
+                        <div class="input__line"></div
+                      ></label>
                     </div>
                   </div>
-                  <button
-                    class="contact-info__submit button button_sm"
-                    type="submit"
-                  >
-                    <span>Далее</span>
-                  </button>
+                  <div class="identification__row">
+                    <div class="inputs input">
+                      <div class="input__wrapper">
+                        <div class="input__label">Срок действия</div>
+                        <label class="input__group"
+                          ><input
+                            class="input__target"
+                            type="text"
+                            placeholder="XX/XX" />
+                          <div class="input__line"></div
+                        ></label>
+                      </div>
+                    </div>
+                    <div class="inputs input">
+                      <div class="input__wrapper">
+                        <div class="input__label">CVV</div>
+                        <label class="input__group"
+                          ><div class="input__icon">
+                            <img
+                              src="./images/UI/inputs/card-back.svg"
+                              alt="card-back"
+                            />
+                          </div>
+                          <input
+                            class="input__target"
+                            type="text"
+                            placeholder="XXX" />
+                          <div class="input__line"></div
+                        ></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="identification__footer">
+                    <span
+                      class="identification__popup-btn"
+                      data-popup-id="id_popup"
+                      >У меня нет карты </span
+                    ><button
+                      class="identification__submit button button_sm"
+                      type="submit"
+                    >
+                      <span>Далее</span>
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
@@ -198,20 +171,18 @@
                       ></use>
                     </svg>
                   </div>
-                  <h2 class="popup__title title">Соглашения</h2>
+                  <h2 class="popup__title title">
+                    Вы уверены, что хотите пропустить ввод карты?
+                  </h2>
                   <p class="popup__text">
-                    Даю свое согласие на
-                    <a href="#">обработку персональных данных</a> и на получение
-                    рекламных материалов, принимаю условия публичной оферты,
-                    соглашение о применении рекуррентных платежей и тарифы
-                    сервиса. Осознаю, что оплата услуг не гарантирует получение
-                    займа. Настоящим подтверждаю, что не являюсь получателем
-                    единовременных и/или регулярных денежных выплат,
-                    предусмотренных Указами Президента РФ.
+                    Это существенно снизит вероятность одобрения займа
                   </p>
                   <div class="popup__actions">
+                    <span class="popup__cancel" data-popup-close
+                      >Продолжить без неё</span
+                    >
                     <a class="popup__action button" href="#"
-                      ><span>Далее</span></a
+                      ><span>Активировать</span></a
                     >
                   </div>
                 </div>
