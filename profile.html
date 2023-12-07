@@ -102,9 +102,7 @@
                 <span class="profile__action active" data-tab-button="scoring"
                   >Скоринг</span
                 >
-                <span
-                  class="profile__action active"
-                  data-tab-button="profile-settings"
+                <span class="profile__action" data-tab-button="profile-settings"
                   >Профиль</span
                 >
                 <span class="profile__action">Лента событий</span>
@@ -518,9 +516,661 @@
                 >
                   <div class="content-wrapper">
                     <div class="content-wrapper__body">
-                      <div class="profile-settings__wrapper">
-                        profile-settings
+                      <h2 class="profile-settings__title title">Профиль</h2>
+                      <div class="profile-settings__groups">
+                        <div class="profile-settings__group" data-toggle-card>
+                          <div class="profile-settings__head">
+                            <span class="profile-settings__label"
+                              >Личные данные</span
+                            >
+                            <div class="profile-settings__edit" data-toggle-btn>
+                              <span>Изменить</span>
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#pen"
+                                  xlink:href="./images/sprite.svg#pen"
+                                ></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            class="profile-settings__current active"
+                            data-toggle-current
+                          >
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >ФИО</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Никитин Богдан Сергеевич</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Дата рождения</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >25.10.1995</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Телефон</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >+ 7 495 345 67 89</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Телефон</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >customersmail@gmail.com</span
+                              >
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__form"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">ФИО</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Фамилия"
+                                    value="Никитин Богдан Сергеевич" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Дата рождения</div>
+                                <label class="input__group"
+                                  ><div class="input__icon">
+                                    <svg>
+                                      <use
+                                        href="./images/sprite.svg#calendar"
+                                        xlink:href="./images/sprite.svg#calendar"
+                                      ></use>
+                                    </svg>
+                                  </div>
+                                  <input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Дата"
+                                    value="25.10.1995" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Телефон</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Телефон"
+                                    value="+ 7 495 345 67 89" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">
+                                  Электронная почта
+                                </div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Электронная почта"
+                                    value="customersmail@gmail.com" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <button
+                              class="profile-settings__submit button button_sm"
+                              type="submit"
+                            >
+                              <span>Сохранить</span>
+                            </button>
+                          </form>
+                        </div>
+                        <div class="profile-settings__group" data-toggle-card>
+                          <div class="profile-settings__head">
+                            <span class="profile-settings__label"
+                              >Паспортные данные</span
+                            >
+                            <div class="profile-settings__edit" data-toggle-btn>
+                              <span>Изменить</span>
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#pen"
+                                  xlink:href="./images/sprite.svg#pen"
+                                ></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            class="profile-settings__current active"
+                            data-toggle-current
+                          >
+                            <div class="profile-settings__current-row">
+                              <div class="profile-settings__current-group">
+                                <span class="profile-settings__current-label"
+                                  >Серия</span
+                                >
+                                <span class="profile-settings__current-value"
+                                  >3703</span
+                                >
+                              </div>
+                              <div class="profile-settings__current-group">
+                                <span class="profile-settings__current-label"
+                                  >Номер паспорта</span
+                                >
+                                <span class="profile-settings__current-value"
+                                  >833248</span
+                                >
+                              </div>
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Место рождения</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Дата выдачи паспорта</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >25.10.1977</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Кем выдан</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >ГУ МВД России по г.Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-row">
+                              <div class="profile-settings__current-group">
+                                <span class="profile-settings__current-label"
+                                  >Код подразделения</span
+                                >
+                                <span class="profile-settings__current-value"
+                                  >770 - 011</span
+                                >
+                              </div>
+                              <div class="profile-settings__current-group">
+                                <span class="profile-settings__current-label"
+                                  >Ваш пол</span
+                                >
+                                <span class="profile-settings__current-value"
+                                  >Мужской</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__form"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Серия</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Серия"
+                                    value="3703" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Номер паспорта</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Номер"
+                                    value="833248" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs select">
+                              <div class="select__wrapper">
+                                <div class="select__label">Город</div>
+                                <div class="select__body">
+                                  <select data-select>
+                                    <option value="Санкт-Петербург">
+                                      Санкт-Петербург
+                                    </option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">
+                                      Екатеренбург
+                                    </option>
+                                  </select>
+                                  <div class="select__icon">
+                                    <svg>
+                                      <use
+                                        href="./images/sprite.svg#drop"
+                                        xlink:href="./images/sprite.svg#drop"
+                                      ></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__line"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">
+                                  Дата выдачи паспорта
+                                </div>
+                                <label class="input__group"
+                                  ><div class="input__icon">
+                                    <svg>
+                                      <use
+                                        href="./images/sprite.svg#calendar"
+                                        xlink:href="./images/sprite.svg#calendar"
+                                      ></use>
+                                    </svg>
+                                  </div>
+                                  <input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Дата"
+                                    value="25.10.1977" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Кем выдан</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Кем выдан"
+                                    value="ГУ МВД России по г.Санкт-Петербург" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">
+                                  Код подразделения
+                                </div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Код подразделения"
+                                    value="770 - 011" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="profile-settings__radio inputs radio">
+                              <div class="radio__wrapper">
+                                <div class="radio__label">Ваш пол</div>
+                                <div class="radio__body">
+                                  <div class="radio__items">
+                                    <label class="radio__item"
+                                      ><input
+                                        checked="checked"
+                                        class="radio__input"
+                                        type="radio"
+                                        name="sex"
+                                        value="male"
+                                      />
+                                      <span class="radio__content"
+                                        ><span>Мужской</span></span
+                                      ></label
+                                    >
+                                    <label class="radio__item"
+                                      ><input
+                                        class="radio__input"
+                                        type="radio"
+                                        name="sex"
+                                        value="female"
+                                      />
+                                      <span class="radio__content"
+                                        ><span>Женский</span></span
+                                      ></label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <button
+                              class="profile-settings__submit button button_sm"
+                              type="submit"
+                            >
+                              <span>Сохранить</span>
+                            </button>
+                          </form>
+                        </div>
+                        <div class="profile-settings__group" data-toggle-card>
+                          <div class="profile-settings__head">
+                            <span class="profile-settings__label"
+                              >Адрес регистрации</span
+                            >
+                            <div class="profile-settings__edit" data-toggle-btn>
+                              <span>Изменить</span>
+                              <svg>
+                                <use
+                                  href="./images/sprite.svg#pen"
+                                  xlink:href="./images/sprite.svg#pen"
+                                ></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div
+                            class="profile-settings__current active"
+                            data-toggle-current
+                          >
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Область</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Ленинградская</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Населенный пункт</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >г. Санкт-Петербург</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Улица</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >Рубинштейна</span
+                              >
+                            </div>
+                            <div class="profile-settings__current-group">
+                              <span class="profile-settings__current-label"
+                                >Дом, квартира</span
+                              >
+                              <span class="profile-settings__current-value"
+                                >14А, 57</span
+                              >
+                            </div>
+                          </div>
+                          <form
+                            class="profile-settings__form"
+                            data-toggle-edit
+                            style="display: none"
+                          >
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Область</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Область"
+                                    value="Ленинградская" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs select">
+                              <div class="select__wrapper">
+                                <div class="select__label">
+                                  Населенный пункт
+                                </div>
+                                <div class="select__body">
+                                  <select data-select>
+                                    <option value="Санкт-Петербург">
+                                      Санкт-Петербург
+                                    </option>
+                                    <option value="Москва">Москва</option>
+                                    <option value="Екатеренбург">
+                                      Екатеренбург
+                                    </option>
+                                  </select>
+                                  <div class="select__icon">
+                                    <svg>
+                                      <use
+                                        href="./images/sprite.svg#drop"
+                                        xlink:href="./images/sprite.svg#drop"
+                                      ></use>
+                                    </svg>
+                                  </div>
+                                  <div class="select__line"></div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Улица</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Улица"
+                                    value="Рубинштейна" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <div class="inputs input">
+                              <div class="input__wrapper">
+                                <div class="input__label">Дом, квартира</div>
+                                <label class="input__group"
+                                  ><input
+                                    class="input__target"
+                                    type="text"
+                                    placeholder="Дом, квартира"
+                                    value="14А, 57" />
+                                  <div class="input__line"></div
+                                ></label>
+                              </div>
+                            </div>
+                            <button
+                              class="profile-settings__submit button button_sm"
+                              type="submit"
+                            >
+                              <span>Сохранить</span>
+                            </button>
+                          </form>
+                        </div>
                       </div>
+                      <div class="profile-settings__socials">
+                        <div
+                          class="profile-settings__social"
+                          style="--social-clr: #1d9bf0"
+                        >
+                          <svg
+                            class="profile-settings__logo"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M10.7715 3.55243C10.7788 3.65822 10.7788 3.76401 10.7788 3.87077C10.7788 7.12391 8.30225 10.8758 3.7738 10.8758V10.8738C2.43608 10.8758 1.12614 10.4926 0 9.7701C0.194516 9.7935 0.390006 9.8052 0.585984 9.80569C1.69458 9.80666 2.77148 9.4347 3.64363 8.74975C2.59013 8.72976 1.6663 8.04286 1.34357 7.04006C1.71261 7.11123 2.09287 7.09661 2.45509 6.99764C1.30652 6.76559 0.480195 5.75645 0.480195 4.58448V4.55328C0.822425 4.7439 1.20561 4.84969 1.59756 4.86139C0.515783 4.13841 0.182328 2.69929 0.835588 1.57412C2.08556 3.11221 3.9298 4.04725 5.90957 4.14621C5.71115 3.29112 5.98221 2.39509 6.62182 1.79399C7.61341 0.861874 9.17294 0.90965 10.1051 1.90075C10.6564 1.79204 11.1849 1.58972 11.6685 1.30307C11.4847 1.87296 11.1001 2.35706 10.5862 2.66468C11.0742 2.60715 11.551 2.4765 12 2.27711C11.6695 2.77242 11.2531 3.20386 10.7715 3.55243Z"
+                            />
+                          </svg>
+                          <span>Twitter</span>
+                          <button
+                            class="profile-settings__social-remove"
+                            type="button"
+                          >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#delete"
+                                xlink:href="./images/sprite.svg#delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          class="profile-settings__social profile-settings__social_tie"
+                          href="#"
+                          style="--social-clr: #0077ff"
+                          ><svg
+                            class="profile-settings__logo"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.53588 9.375C2.43594 9.375 0.0974391 6.84122 0 2.625H2.05372C2.12117 5.71959 3.63519 7.03041 4.83444 7.30068V2.625H6.76831V5.29392C7.95257 5.17905 9.19664 3.96284 9.61638 2.625H11.5502C11.2279 4.27365 9.87875 5.48987 8.91935 5.98987C9.87875 6.39527 11.4154 7.45608 12 9.375H9.87126C9.41404 8.09122 8.27487 7.09797 6.76831 6.96284V9.375H6.53588Z"
+                            />
+                          </svg>
+                          <span>Привязать</span>
+                          <div class="profile-settings__social-icon">
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#arrow-right"
+                                xlink:href="./images/sprite.svg#arrow-right"
+                              ></use>
+                            </svg></div
+                        ></a>
+                        <div
+                          class="profile-settings__social"
+                          style="--social-clr: #1d52a1"
+                        >
+                          <svg
+                            class="profile-settings__logo"
+                            viewBox="0 0 12 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3 3.96694H4.28571V2.77686C4.28571 2.24688 4.314 1.40221 4.71429 0.892562C5.13364 0.355835 5.65093 0 6.64286 0C8.26071 0 9 0.198347 9 0.198347L8.67857 2.08264C8.33425 1.96699 7.97303 1.90012 7.60714 1.8843C7.1055 1.8843 6.64286 1.99706 6.64286 2.47934V3.96694H8.78571V5.75207H6.64286V12H4.28571V5.75207H3V3.96694Z"
+                            />
+                          </svg>
+                          <span>Facebook</span>
+                          <button
+                            class="profile-settings__social-remove"
+                            type="button"
+                          >
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#delete"
+                                xlink:href="./images/sprite.svg#delete"
+                              ></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <a
+                          class="profile-settings__social profile-settings__social_tie"
+                          href="#"
+                          style="--social-clr: #1870b1"
+                          ><svg
+                            class="profile-settings__logo"
+                            viewBox="0 0 13 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.8511 7.25317V11.5388H10.2791V7.54019C10.2791 6.5357 9.90707 5.85018 8.9761 5.85018C8.26542 5.85018 7.84249 6.31217 7.65643 6.75907C7.58858 6.91884 7.57112 7.14121 7.57112 7.36485V11.5388H4.99826C4.99826 11.5388 5.03291 4.76645 4.99826 4.06478H7.57086V5.1242C7.56565 5.13212 7.55887 5.14067 7.55396 5.14835H7.57086V5.1242C7.91266 4.61566 8.52307 3.88919 9.88936 3.88919C11.5821 3.88917 12.8511 4.95742 12.8511 7.25317ZM2.30695 0.461914C1.42678 0.461914 0.851074 1.01961 0.851074 1.753C0.851074 2.47041 1.41012 3.04503 2.2728 3.04503H2.28998C3.1872 3.04503 3.74519 2.47052 3.74519 1.753C3.72828 1.01961 3.1872 0.461914 2.30695 0.461914ZM1.00388 11.5388H3.57576V4.06478H1.00388V11.5388Z"
+                            />
+                          </svg>
+                          <span>Привязать</span>
+                          <div class="profile-settings__social-icon">
+                            <svg>
+                              <use
+                                href="./images/sprite.svg#arrow-right"
+                                xlink:href="./images/sprite.svg#arrow-right"
+                              ></use>
+                            </svg></div
+                        ></a>
+                      </div>
+                      <form class="profile-settings__password">
+                        <div class="profile-settings__head">
+                          <span class="profile-settings__label"
+                            >Сменить пароль</span
+                          >
+                        </div>
+                        <div class="profile-settings__password__inputs">
+                          <div class="inputs input">
+                            <div class="input__wrapper">
+                              <div class="input__label">Текущий пароль</div>
+                              <label class="input__group"
+                                ><input class="input__target" type="password" />
+                                <div class="input__line"></div>
+                                <div class="input__icon" data-visible-pass-btn>
+                                  <svg>
+                                    <use
+                                      href="./images/sprite.svg#eye"
+                                      xlink:href="./images/sprite.svg#eye"
+                                    ></use>
+                                  </svg></div
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="inputs input">
+                            <div class="input__wrapper">
+                              <div class="input__label">Новый пароль</div>
+                              <label class="input__group"
+                                ><input class="input__target" type="password" />
+                                <div class="input__line"></div>
+                                <div class="input__icon" data-visible-pass-btn>
+                                  <svg>
+                                    <use
+                                      href="./images/sprite.svg#eye"
+                                      xlink:href="./images/sprite.svg#eye"
+                                    ></use>
+                                  </svg></div
+                              ></label>
+                            </div>
+                          </div>
+                          <div class="inputs input">
+                            <div class="input__wrapper">
+                              <div class="input__label">Подтвердить пароль</div>
+                              <label class="input__group"
+                                ><input class="input__target" type="password" />
+                                <div class="input__line"></div>
+                                <div class="input__icon" data-visible-pass-btn>
+                                  <svg>
+                                    <use
+                                      href="./images/sprite.svg#eye"
+                                      xlink:href="./images/sprite.svg#eye"
+                                    ></use>
+                                  </svg></div
+                              ></label>
+                            </div>
+                          </div>
+                        </div>
+                        <button
+                          class="profile-settings__submit button button_sm"
+                          type="submit"
+                        >
+                          <span>Сохранить</span>
+                        </button>
+                      </form>
                     </div>
                   </div>
                 </div>
