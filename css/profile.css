@@ -2713,11 +2713,11 @@ textarea.input__target {
     transition: background 0.2s linear, color 0.2s linear;
 }
 
-@media (any-hover: hover) {
-    .profile-settings__social_tie span::before {
-        content: attr(data-social-name);
-    }
+.profile-settings__social_tie span::before {
+    content: attr(data-social-name);
+}
 
+@media (any-hover: hover) {
     .profile-settings__social_tie:hover {
         color: var(--_social-clr);
         background: transparent;
